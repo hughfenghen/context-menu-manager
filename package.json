@@ -1,0 +1,20 @@
+{
+  "name": "right-menu-manager",
+  "main": "./lib/right-menu-manager",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "right-menu-manager:toggle"
+  },
+  "repository": "https://github.com/atom/right-menu-manager",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.2.0",
+    "underscore": "^1.8.3",
+    "vue": "^2.1.10"
+  }
+}

@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+    .right-menu-manager {
+        color: #f00;
+        text-align: center;
+        margin: auto;
+    }
+    .right-menu-manager .search-result ul {
+        list-style-type: none
+    }
+    .label {
+        display: flex;
+        width: 70%;
+        margin: 20px auto;
+        padding: 3px 5px;
+        border: 1px solid #999;
+    }
+    .label .left {
+        flex: 1;
+        text-align: left;
+    }
+    .label .center {
+        flex: 1;
+        text-align: right;;
+    }
+    .label .right {
+        flex: 1;
+        text-align: right;;
+    }
+</style>
+<div class="right-menu-manager">
+    <div class="search-bar">
+        <span>Search:</span>
+        <input type="text" name="" value="">
+    </div>
+    <div class="search-result">
+        <div class="label">
+            <div class="left">
+                复制
+            </div>
+            <div class="center">
+
+            </div>
+            <div class="right">
+                <button type="button" name="button">禁用</button>
+            </div>
+        </div>
+        <dl>
+            <dt>12111</dt>
+            <dd>12111</dd>
+        </ul>
+    </div>
+    <div class="test">
+
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript">
+    var data = [{"selector":"atom-workspace","items":[{"label":"验证元素","command":"application:inspect","devMode":true}],"specificity":1},{"selector":"atom-text-editor, .overlayer","items":[{"label":"撤销","command":"core:undo"},{"label":"重复","command":"core:redo"},{"type":"separator"},{"label":"剪切","command":"core:cut"},{"label":"复制","command":"core:copy"},{"label":"粘贴","command":"core:paste"},{"label":"删除","command":"core:delete"},{"label":"全选","command":"core:select-all"},{"type":"separator"},{"label":"Split Up","command":"pane:split-up-and-copy-active-item"},{"label":"Split Down","command":"pane:split-down-and-copy-active-item"},{"label":"Split Left","command":"pane:split-left-and-copy-active-item"},{"label":"Split Right","command":"pane:split-right-and-copy-active-item"},{"label":"关闭窗格","command":"pane:close"},{"type":"separator"}],"specificity":1}]
+
+    createResDom(_.chain(data).pluck('items').flatten().value())
+    function writeToDom(obj) {
+        $('.test').text(JSON.stringify(obj))
+    }
+
+    function createResDom(resArr) {
+        var resStr = resArr.map(function(it) {
+            return '<dt>' + it.label + '</dt><dd>' + it.command +'</dd>'
+        }).join('')
+        console.log(resStr)
+
+        $('.search-result dl').html(resStr)
+    }
+</script>
