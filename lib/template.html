@@ -60,6 +60,12 @@
 <script type="text/javascript">
     var data = [{"selector":"atom-workspace","items":[{"label":"验证元素","command":"application:inspect","devMode":true}],"specificity":1},{"selector":"atom-text-editor, .overlayer","items":[{"label":"撤销","command":"core:undo"},{"label":"重复","command":"core:redo"},{"type":"separator"},{"label":"剪切","command":"core:cut"},{"label":"复制","command":"core:copy"},{"label":"粘贴","command":"core:paste"},{"label":"删除","command":"core:delete"},{"label":"全选","command":"core:select-all"},{"type":"separator"},{"label":"Split Up","command":"pane:split-up-and-copy-active-item"},{"label":"Split Down","command":"pane:split-down-and-copy-active-item"},{"label":"Split Left","command":"pane:split-left-and-copy-active-item"},{"label":"Split Right","command":"pane:split-right-and-copy-active-item"},{"label":"关闭窗格","command":"pane:close"},{"type":"separator"}],"specificity":1}]
 
+    _.chain(data).each(function(contextMenuItemSet) {
+        contextMenuItemSet.items.forEach(function(it) {
+            it.selector = contextMenuItemSet.selector
+        })
+    }).pluck('items').flatten().value()
+
     createResDom(_.chain(data).pluck('items').flatten().value())
     function writeToDom(obj) {
         $('.test').text(JSON.stringify(obj))
