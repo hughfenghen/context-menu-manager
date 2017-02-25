@@ -1,12 +1,10 @@
 {
   "name": "right-menu-manager",
-  "main": "./lib/right-menu-manager",
+  "main": "./lib/main",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "right-menu-manager:toggle"
-  },
+  "activationCommands": {},
   "repository": "https://github.com/atom/right-menu-manager",
   "license": "MIT",
   "engines": {
