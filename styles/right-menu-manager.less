@@ -5,7 +5,6 @@
 @import "ui-variables";
 
 .right-menu-manager {
-    color: @text-color;
     margin: 10px auto;
     // height: 1000px;
     overflow: auto;
@@ -16,19 +15,48 @@
         text-align: center;
     }
 
+    .heading {
+        width: 70%;
+        text-align: left;
+        margin: 10px auto;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .heading:after {
+        font-family: 'Octicons Regular';
+        line-height: 1;
+        text-decoration: none;
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        content: "\f0cc";
+        position: absolute;
+        right: 15%;
+    }
+
     .hidden-menus .menu-item {
+        color: @text-color-subtle;
         background-color: #2c313a;
     }
+
     .visible-menus .menu-item {
+        color: @text-color;
         background-color: #333842;
     }
+
     .menu-item {
         display: flex;
         width: 70%;
-        margin: 0px auto 10px auto;
-        padding: 8px 8px;
+        margin: 0 auto 10px;
+        padding: 8px;
         border: 1px solid #181a1f;
         align-items: center;
+
+        .shortcut, label {
+            cursor: pointer;
+            vertical-align: middle;
+            margin: 0;
+        }
 
         .left {
             flex: 4;
@@ -38,13 +66,10 @@
                 margin-bottom: 5px;
             }
         }
-        .center {
-            flex: 1;
-            text-align: right;;
-        }
+
         .right {
-            flex: 1;
-            text-align: right;;
+            flex: 2;
+            text-align: right;
         }
     }
 }
