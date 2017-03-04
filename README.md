@@ -1,4 +1,4 @@
-# right-menu-manager package
+# context-menu-manager package
 
 atom插件，管理右键菜单。
 
