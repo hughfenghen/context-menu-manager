@@ -1,13 +1,13 @@
 'use babel';
 
-import RightMenuManager from '../lib/context-menu-manager';
+import ContextMenuManager from '../lib/context-menu-manager';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('RightMenuManager', () => {
+describe('ContextMenuManager', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
@@ -32,13 +32,13 @@ describe('RightMenuManager', () => {
       runs(() => {
         expect(workspaceElement.querySelector('.context-menu-manager')).toExist();
 
-        let rightMenuManagerElement = workspaceElement.querySelector('.context-menu-manager');
-        expect(rightMenuManagerElement).toExist();
+        let contextMenuManagerElement = workspaceElement.querySelector('.context-menu-manager');
+        expect(contextMenuManagerElement).toExist();
 
-        let rightMenuManagerPanel = atom.workspace.panelForItem(rightMenuManagerElement);
-        expect(rightMenuManagerPanel.isVisible()).toBe(true);
+        let contextMenuManagerPanel = atom.workspace.panelForItem(contextMenuManagerElement);
+        expect(contextMenuManagerPanel.isVisible()).toBe(true);
         atom.commands.dispatch(workspaceElement, 'context-menu-manager:toggle');
-        expect(rightMenuManagerPanel.isVisible()).toBe(false);
+        expect(contextMenuManagerPanel.isVisible()).toBe(false);
       });
     });
 
@@ -63,10 +63,10 @@ describe('RightMenuManager', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let rightMenuManagerElement = workspaceElement.querySelector('.context-menu-manager');
-        expect(rightMenuManagerElement).toBeVisible();
+        let contextMenuManagerElement = workspaceElement.querySelector('.context-menu-manager');
+        expect(contextMenuManagerElement).toBeVisible();
         atom.commands.dispatch(workspaceElement, 'context-menu-manager:toggle');
-        expect(rightMenuManagerElement).not.toBeVisible();
+        expect(contextMenuManagerElement).not.toBeVisible();
       });
     });
   });

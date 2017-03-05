@@ -5,7 +5,7 @@
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {},
-  "repository": "https://github.com/atom/context-menu-manager",
+  "repository": "https://github.com/hughfenghen/context-menu-manager",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
