@@ -1,11 +1,11 @@
 {
-  "name": "right-menu-manager",
+  "name": "context-menu-manager",
   "main": "./lib/main",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {},
-  "repository": "https://github.com/atom/right-menu-manager",
+  "repository": "https://github.com/atom/context-menu-manager",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "right-menu-manager:toggle"
+    "ctrl-alt-o": "context-menu-manager:toggle"
   }
 }

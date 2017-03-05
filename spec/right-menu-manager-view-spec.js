@@ -1,6 +1,6 @@
 'use babel';
 
-import RightMenuManagerView from '../lib/right-menu-manager-view';
+import RightMenuManagerView from '../lib/context-menu-manager-view';
 
 describe('RightMenuManagerView', () => {
   it('has one valid test', () => {

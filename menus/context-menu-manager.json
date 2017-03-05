@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle right-menu-manager",
-        "command": "right-menu-manager:toggle"
+        "label": "Toggle context-menu-manager",
+        "command": "context-menu-manager:toggle"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "right-menu-manager",
+          "label": "context-menu-manager",
           "submenu": [
             {
               "label": "Toggle",
-              "command": "right-menu-manager:toggle"
+              "command": "context-menu-manager:toggle"
             }
           ]
         }
