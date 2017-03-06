@@ -2,4 +2,8 @@
 
 atom插件，管理右键菜单。
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+清理菜单 显示快捷键  
+![](https://raw.githubusercontent.com/hughfenghen/context-menu-manager/master/resources/compare.png)  
+
+管理界面  
+![](https://raw.githubusercontent.com/hughfenghen/context-menu-manager/master/resources/manager-view.png)  

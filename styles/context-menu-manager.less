@@ -5,14 +5,25 @@
 @import "ui-variables";
 
 .context-menu-manager {
+    font-family: monospace;
     margin: 10px auto;
-    // height: 1000px;
     overflow: auto;
     padding-bottom: 50px;
 
     .search-bar {
-        margin: 10px auto;
+        margin: 20px auto;
         text-align: center;
+
+        input {
+            background-color: #1b1d23;
+            border: none;
+            height: 30px;
+            width: 40%;
+            padding: 2px 4px;
+        }
+        input::-webkit-input-placeholder {
+            color: rgba(157, 165, 180, 0.6);
+        }
     }
 
     .heading {
@@ -32,6 +43,12 @@
         content: "\f0cc";
         position: absolute;
         right: 15%;
+    }
+    .heading.collapsed:after {
+        content: "\f039";
+    }
+    .heading:hover:after {
+        color: #d7dae0;
     }
 
     .hidden-menus .menu-item {
