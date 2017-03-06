@@ -1,9 +1,18 @@
 {
   "name": "context-menu-manager",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "atom 右键菜单管理插件",
-  "keywords": ["context menu", "atom", "package", "plugin", "clean", "manager", "menu", "右键菜单"],
+  "keywords": [
+    "context menu",
+    "atom",
+    "package",
+    "plugin",
+    "clean",
+    "manager",
+    "menu",
+    "右键菜单"
+  ],
   "activationCommands": {},
   "repository": "https://github.com/hughfenghen/context-menu-manager",
   "license": "MIT",
